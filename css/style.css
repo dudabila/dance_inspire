@@ -1,0 +1,469 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#F8F5F2;
+    color:#2C2C2C;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ffffff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    color:#8B1E2D;
+    font-size:2rem;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#6B4F3B;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#8B1E2D;
+}
+
+nav a.ativo{
+    color:#8B1E2D;
+    border-bottom:2px solid #8B1E2D;
+    padding-bottom:4px;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.texto-banner{
+    flex:1;
+}
+
+.texto-banner h2{
+    font-size:3rem;
+    color:#8B1E2D;
+    margin-bottom:20px;
+}
+
+.texto-banner p{
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+.imagem-banner{
+    flex:1;
+}
+
+.imagem-banner img{
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+/* ===========================
+   BOTÃO
+=========================== */
+
+.botao{
+    display:inline-block;
+    padding:14px 28px;
+    background:#8B1E2D;
+    color:white;
+    border-radius:50px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.botao:hover{
+    background:#6F1623;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+.titulo-pagina{
+    text-align:center;
+    padding:70px 8% 30px;
+}
+
+.titulo-pagina h2{
+    color:#8B1E2D;
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   DESTAQUES (Artigos em destaque na Home)
+=========================== */
+
+.destaques{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.destaques h2{
+    color:#8B1E2D;
+    margin-bottom:40px;
+}
+
+/* Usada na página Artigos - contém os cards da listagem completa */
+.artigos{
+    padding:70px 8%;
+}
+
+.artigos h2{
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    text-align:left;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card img{
+    height:180px;
+    width:100%;
+    object-fit:cover;
+    object-position:center center;
+}
+
+/* Classes extras para ajustar o enquadramento de fotos específicas nos cards.
+   Adicione UMA delas na tag <img> do card que quiser ajustar. */
+
+.card img.pos-topo{
+    object-position:center 0%;
+}
+
+.card img.pos-baixo{
+    object-position:center 100%;
+}
+
+.card img.pos-um-pouco-cima{
+    object-position:center 25%;
+}
+
+.card img.pos-um-pouco-baixo{
+    object-position:center 75%;
+}
+
+.card h3{
+    padding:20px 20px 10px;
+    color:#8B1E2D;
+}
+
+.card p{
+    padding:0 20px 25px;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card.card-hover{
+    border:2px solid #8B1E2D;
+}
+
+/* ===========================
+   TRAJETÓRIA (Minha Trajetória na Home)
+=========================== */
+
+.trajetoria{
+    padding:70px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.texto-trajetoria{
+    flex:1.3;
+}
+
+.texto-trajetoria h2{
+    color:#8B1E2D;
+    margin-bottom:20px;
+}
+
+.texto-trajetoria p{
+    margin-bottom:30px;
+}
+
+.imagem-trajetoria{
+    flex:0.8;
+    display:flex;
+    justify-content:center;
+}
+
+.imagem-trajetoria img{
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+/* ===========================
+   HISTÓRIA (usada na página Sobre - mesmo layout da Trajetória)
+=========================== */
+
+.historia{
+    padding:70px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.texto-historia{
+    flex:1.3;
+}
+
+.texto-historia h3{
+    color:#8B1E2D;
+    margin-bottom:20px;
+}
+
+.texto-historia p{
+    margin-bottom:20px;
+}
+
+.foto-historia{
+    flex:0.8;
+    display:flex;
+    justify-content:center;
+}
+
+.foto-historia img{
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+/* ===========================
+   IMAGEM INTEIRA (classe extra p/ fotos específicas sem corte)
+=========================== */
+
+.imagem-inteira{
+    object-fit:contain!important;
+    background:#EFE7DF;
+    height:auto!important;
+    max-width:380px;
+}
+
+/* ===========================
+   GALERIA
+=========================== */
+
+.galeria{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.galeria h2{
+    color:#8B1E2D;
+    margin-bottom:15px;
+}
+
+.galeria p{
+    margin-bottom:40px;
+}
+
+.galeria-imagens{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.galeria-imagens img{
+    border-radius:15px;
+    cursor:pointer;
+    transition:.4s;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.galeria-imagens img:hover{
+    transform:scale(1.05);
+    filter:brightness(1.15);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+.contato{
+    padding:60px 8%;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:1px solid #d8d8d8;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#8B1E2D;
+}
+
+.campo-erro{
+    border-color:#C0392B!important;
+    background:#FDECEA;
+}
+
+.feedback-formulario{
+    margin-top:15px;
+    padding:12px 15px;
+    border-radius:8px;
+    font-weight:600;
+    display:none;
+}
+
+.feedback-formulario:not(:empty){
+    display:block;
+}
+
+.feedback-formulario.sucesso{
+    background:#E7F6EC;
+    color:#1E7A34;
+}
+
+.feedback-formulario.erro{
+    background:#FDECEA;
+    color:#C0392B;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:50px;
+    background:#8B1E2D;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.banner{
+    flex-direction:column;
+    text-align:center;
+}
+
+.trajetoria{
+    flex-direction:column;
+    text-align:center;
+}
+
+.historia{
+    flex-direction:column;
+    text-align:center;
+}
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.texto-banner h2{
+    font-size:2.2rem;
+}
+
+}
